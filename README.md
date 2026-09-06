@@ -6,6 +6,8 @@ This repository accompanies the manuscript **“A predefined triclosan-related 2
 
 This archive preserves the recovered final/accepted R scripts and provenance files supporting the principal external-validation, direct-exposure, survival, cross-cohort meta-analysis, Hallmark-panorama, and matched-random analyses. It is intended as a transparent analysis archive, not as a claim that every historical intermediate object or the original upstream candidate-collection script has been recovered.
 
+The complete recovered script tree is distributed as `TNBC_Triclosan_repository_ready.zip`. Key provenance files are also exposed directly under `provenance/` for auditability.
+
 ## Analysis freeze
 
 The 24-gene panel and downstream inferential analyses are frozen. No gene was replaced, no threshold was altered, no random seed was changed, and no random set was removed based on its result during the recovery/deposition process.
@@ -31,7 +33,7 @@ Audit against the gene-name field used in the original TCGA analysis showed:
 - 24 mapped entries met the prespecified differential-expression criteria
 - those 24 entries exactly match the locked 24-gene panel
 
-See `provenance/` for the raw file and row-level mapping audit.
+See `provenance/` for the raw file and derivation audit.
 
 ## Public source datasets
 
@@ -43,7 +45,7 @@ See `provenance/` for the raw file and row-level mapping audit.
 
 Raw public expression data are not redistributed in this repository.
 
-## Script groups
+## Script groups inside the packaged archive
 
 - `scripts/01_GSE31519/`: external validation, endpoint curation, survival, and EMT analyses
 - `scripts/02_GSE95554_exposure/`: rat exposure design, orthology mapping, and triclosan-vs-oil testing
@@ -67,7 +69,7 @@ The final matched-random audit was executed under R 4.6.1 with GSVA 2.6.2. Indiv
 
 ## Integrity
 
-`manifests/repository_manifest_md5.csv` lists the relative path, byte size, and MD5 checksum of every archived file except the manifest itself. The manifest reflects the archived deposition package; GitHub path normalization of two directory names does not alter the script contents.
+The packaged archive contains `manifests/repository_manifest_md5.csv`, listing relative paths, byte sizes, and MD5 checksums for the archived files. Script contents are preserved as recovered.
 
 ## Repository and archival status
 
