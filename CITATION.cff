@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "TNBC-Triclosan reproducibility archive"
+version: 1.0.0
+type: software
+abstract: "Recovered final analysis scripts and provenance files supporting the manuscript 'A predefined triclosan-related 24-gene score is associated with an EMT-enriched tumor state in triple-negative breast cancer'."
+message: "If you use this analysis archive, please cite the archived software record and the associated manuscript when available."
+authors:
+  - given-names: Jiachi
+    family-names: Ji
+    affiliation: "First Clinical Medical School, Beijing University of Chinese Medicine, Beijing 100029, China"
+  - given-names: Peng
+    family-names: Lyu
+    affiliation: "Cancer Diagnosis and Treatment Center, The Central Hospital of Enshi Tujia and Miao Autonomous Prefecture, Enshi 445000, Hubei, China"
+  - given-names: Fengqin
+    family-names: Shi
+    affiliation: "Department of Hematology and Oncology, Dongzhimen Hospital, Beijing University of Chinese Medicine, Beijing 100700, China"
+repository-code: "https://github.com/jjc-jjc39/TNBC-Triclosan"
+keywords:
+  - triple-negative breast cancer
+  - triclosan
+  - epithelial-mesenchymal transition
+  - transcriptomics
+  - reproducibility
