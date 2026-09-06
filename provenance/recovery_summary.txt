@@ -1,0 +1,89 @@
+TNBC_Triclosan 历史原始source与最终R脚本恢复说明
+================================================
+
+一、原始251候选表已经找回
+------------------------
+原始文件：triclosan_targets.csv
+原始数据行：251
+列：gene, source
+gene字段唯一值：251
+source字段唯一值：1
+source实际值：['multi-database+pug']
+
+重要说明：
+1. 这张表是项目当时实际使用/保存的原始候选表，本恢复包中的
+   “01_原始_triclosan_targets_251行_完全未改.csv”未进行任何清洗。
+2. 原表中存在大量并非规范人类基因符号外观的PubChem assay相关字符串、
+   缩写、细胞系/测定名或accession样式条目。
+3. 因此，不宜再把原始251行笼统表述为“251个经过规范验证的人类靶基因”。
+   更严谨的称呼是：251条原始triclosan-related候选条目/候选字符串。
+4. 原始source列没有逐行拆分CTD、STITCH、PubChem证据；251行全部标记为
+   “multi-database+pug”。因此旧稿中“Supplementary Table S1提供每个基因
+   的source database和evidence type”这一说法与现存原表不一致。
+
+二、251 → TCGA基因空间 → 24基因的交集可以完整复现
+--------------------------------------------------
+原始251条候选中：
+- 能在当时TCGA全部分析结果gene_name字段中找到：66条
+- 同时进入预设显著DEG表（共2386个DEG）：24条
+- 这24条与当前锁定24基因集合完全一致：True
+
+24基因：
+ESR1, AR, PGR, THRA, THRB, CAT, BCL2, BAX, PARP1, IL6, ABCB1, ABCG2, FASN, SCD, TWIST1, PPARG, EGFR, MMP9, JUN, FOS, ADRB2, ERG, H2AX, MITF
+
+核验文件：
+- 02_原始251候选条目_TCGA映射与24基因交集核验.csv
+- 03_最终锁定24基因_DEG统计与来源核验.csv
+
+这说明：
+24基因交集本身可以由原始历史文件完全复现；
+真正需要修正的是对“上游251条候选”的命名与证据描述，而不是重新筛选24基因。
+
+三、最终R脚本恢复情况
+--------------------
+已恢复脚本总数：34
+- GSE31519：13
+- GSE95554真实暴露：7
+- GSE58812：6
+- TCGA及跨队列最终分析：8
+
+关键最终版本：
+- TCGA EMT：Script13G_B_v4
+- 三队列EMT Meta：Script13G_C_v2
+- Hallmark：Script14A_v2 + accepted Script14B three_cohort + Script14C
+- matched-random：Script15A + Script15B + Script15C_v2
+
+特别注意：
+Script15C v1已被后续v2正式替代，因为v1存在GSVA评分上下文/estimand问题。
+本恢复包故意不把v1放入“最终R脚本”目录，以防误运行。
+
+四、尚未找到的内容
+------------------
+1. 生成原始251条候选表的最初抓取/拼接R脚本，目前历史Library中没有找到
+   可以与triclosan_targets.csv逐行对应的原始生成脚本。
+2. 原始251表没有保留逐行CTD/STITCH/PubChem来源证据，因此不能从现有文件
+   可靠反推出每一行具体来自哪个数据库。
+3. 历史R对象清单记录过原始单细胞Seurat对象等大型RDS，但当前Library搜索
+   尚未找到这些RDS原件；清单本身已一并保留作为 provenance 证据。
+
+五、建议用于当前论文的严谨表述
+------------------------------
+建议不要写：
+“A total of 251 unique human triclosan target genes were identified...”
+
+建议写成类似：
+“An initial triclosan-related candidate resource contained 251 deduplicated
+entries assembled from literature/database curation and PubChem bioassay-derived
+records. Because the archived raw candidate file also contained assay-related
+strings that did not map to the TCGA gene-symbol space, downstream panel
+derivation was based on entries mapping to the analyzed TCGA gene identifiers.
+Sixty-six archived candidate entries mapped to the TCGA analyzed gene space,
+of which 24 met the prespecified differential-expression criteria; these 24
+genes were locked before external validation.”
+
+这段表述能够被本恢复包中的原始文件和核验结果直接支持。
+
+六、分析冻结原则
+----------------
+本次工作属于“历史来源与可重复性恢复/审计”，没有重新筛选基因、改变阈值、
+改变随机种子或新增结果导向分析。原24基因和后续冻结分析均未改变。

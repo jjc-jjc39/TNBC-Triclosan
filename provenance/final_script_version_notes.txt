@@ -1,0 +1,21 @@
+最终脚本版本说明
+================
+
+本目录只存放当前能从历史Library中恢复并判定为final/accepted的版本。
+
+关键选择：
+- GSE31519 GSVA：v3版本。
+- GSE31519 PH/influence：v4 FINAL。
+- GSE95554 ortholog audit：v5 FINAL。
+- GSE58812 gene build：13C v2。
+- TCGA EMT：13G-B v4。
+- EMT Meta：13G-C v2。
+- Hallmark preflight：14A v2。
+- Hallmark cohort association：采用three_cohort版本；其GSE31519 analytic
+  centered-rank p值与accepted结果包一致。
+- Matched random final：15C v2。
+
+明确排除：
+- Script15C v1：已由v2替代，DO NOT USE。
+- TCGA 13G-B早期v1/v2/v3：均已由v4替代。
+- 13G-C v1：已由v2替代。
