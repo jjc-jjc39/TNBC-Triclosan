@@ -1,0 +1,31 @@
+{
+  "creators": [
+    {
+      "name": "Ji, Jiachi",
+      "affiliation": "First Clinical Medical School, Beijing University of Chinese Medicine, Beijing 100029, China",
+      "type": "ProjectMember"
+    },
+    {
+      "name": "Lyu, Peng",
+      "affiliation": "Cancer Diagnosis and Treatment Center, The Central Hospital of Enshi Tujia and Miao Autonomous Prefecture, Enshi 445000, Hubei, China",
+      "type": "ProjectMember"
+    },
+    {
+      "name": "Shi, Fengqin",
+      "affiliation": "Department of Hematology and Oncology, Dongzhimen Hospital, Beijing University of Chinese Medicine, Beijing 100700, China",
+      "type": "ProjectLeader"
+    }
+  ],
+  "title": "TNBC-Triclosan reproducibility archive",
+  "version": "1.0.0",
+  "access_right": "open",
+  "upload_type": "software",
+  "language": "eng",
+  "keywords": [
+    "triple-negative breast cancer",
+    "triclosan",
+    "epithelial-mesenchymal transition",
+    "transcriptomics",
+    "reproducibility"
+  ]
+}
