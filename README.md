@@ -75,4 +75,6 @@ The packaged archive contains `manifests/repository_manifest_md5.csv`, listing r
 
 GitHub repository: https://github.com/jjc-jjc39/TNBC-Triclosan
 
-A versioned release and permanent DOI archive are planned for the manuscript-associated deposition. The DOI will be added here and to the manuscript after minting.
+Versioned archive (v1.0.0): https://doi.org/10.5281/zenodo.22638702
+
+DOI: 10.5281/zenodo.22638702
