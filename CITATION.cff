@@ -2,6 +2,8 @@ cff-version: 1.2.0
 title: "TNBC-Triclosan reproducibility archive"
 version: 1.0.0
 type: software
+doi: 10.5281/zenodo.22638702
+url: "https://doi.org/10.5281/zenodo.22638702"
 abstract: "Recovered final analysis scripts and provenance files supporting the manuscript 'A predefined triclosan-related 24-gene score is associated with an EMT-enriched tumor state in triple-negative breast cancer'."
 message: "If you use this analysis archive, please cite the archived software record and the associated manuscript when available."
 authors:
