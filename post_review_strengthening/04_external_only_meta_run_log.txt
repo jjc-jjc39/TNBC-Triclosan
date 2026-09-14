@@ -1,0 +1,8 @@
+External-only meta-analysis verification
+Date: 2026-09-14
+Locked input: 01_external_only_input_effects.csv
+Archived output: 03_external_only_meta_results.csv
+The R implementation is deposited as 02_external_only_meta_analysis.R.
+Rscript was not available in the document-build container, so the archived output was independently recomputed from the same formulas in Python (NumPy/SciPy).
+Maximum absolute discrepancy across core numeric result fields: 1.110e-16.
+Verification status: PASS.
