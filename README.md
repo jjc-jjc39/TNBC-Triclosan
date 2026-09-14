@@ -1,6 +1,6 @@
 # TNBC-Triclosan reproducibility archive
 
-This repository accompanies the manuscript **“A predefined triclosan-related 24-gene score is associated with an EMT-enriched tumor state in triple-negative breast cancer.”**
+This repository accompanies the strengthened manuscript **“Cross-cohort validation and specificity stress testing of a triclosan-related 24-gene score in triple-negative breast cancer.”**
 
 ## Scope
 
@@ -10,7 +10,7 @@ The complete recovered script tree is distributed as `TNBC_Triclosan_repository_
 
 ## Analysis freeze
 
-The 24-gene panel and downstream inferential analyses are frozen. No gene was replaced, no threshold was altered, no random seed was changed, and no random set was removed based on its result during the recovery/deposition process.
+The 24-gene panel and original downstream inferential analyses remain frozen. No gene was replaced, no threshold was altered, no random seed was changed, and no random set was removed based on its result during the recovery/deposition process.
 
 Key final versions include:
 
@@ -21,6 +21,15 @@ Key final versions include:
 - Matched-random analysis: `Script15A...` + `Script15B...` + `Script15C_v2...`
 
 `Script15C v1` is intentionally excluded because it was superseded by v2 after identification of a non-exchangeable GSVA scoring-context/estimand issue.
+
+## Post-review strengthening (v1.1.0)
+
+Following peer-review feedback that the clinical relevance of the original submission was limited, strengthening was deliberately restricted to two non-reselective analyses that address reproducibility and provenance rather than searching for a new positive result:
+
+1. **External-only synthesis** excluding the TCGA derivation/internal-association cohort and combining only GSE31519 and GSE58812. The pooled full-EMT correlation is approximately 0.415 (normal-theory 95% CI 0.351–0.474). Because only two external cohorts are available, modified Knapp–Hartung inference is intentionally reported as an imprecise small-k sensitivity check (P≈0.055), not as a binary validation gate.
+2. **Contemporary locked-gene provenance audit** of the unchanged 24-gene panel. Experimental evidence linked to triclosan was independently recoverable for 20 of 24 locked genes; TWIST1, ADRB2, ERG, and MITF were not independently re-established and remain in the panel unchanged to preserve prespecification.
+
+These files are deposited under `post_review_strengthening/`. The post-review work did not alter the locked panel, reselect genes, optimize a threshold, or modify any original result.
 
 ## Archived candidate resource and 24-gene derivation
 
@@ -58,7 +67,7 @@ The scripts are preserved as executed and may contain historical local Windows p
 
 ## Environment
 
-The final matched-random audit was executed under R 4.6.1 with GSVA 2.6.2. Individual scripts may require additional CRAN/Bioconductor packages documented in their source code.
+The final matched-random audit was executed under R 4.6.1 with GSVA 2.6.2. Individual scripts may require additional CRAN/Bioconductor packages documented in their source code. The post-review external-only output was independently rechecked from the locked effect inputs with NumPy/SciPy; the deposited verification log records numerical agreement.
 
 ## Known recovery limitations
 
@@ -77,4 +86,4 @@ GitHub repository: https://github.com/jjc-jjc39/TNBC-Triclosan
 
 Versioned archive (v1.0.0): https://doi.org/10.5281/zenodo.22638702
 
-DOI: 10.5281/zenodo.22638702
+A v1.1.0 archive will preserve the post-review strengthening files before the next journal submission.
