@@ -1,17 +1,17 @@
 cff-version: 1.2.0
 title: "TNBC-Triclosan reproducibility archive"
-version: 1.0.0
+version: 1.1.0
 type: software
 doi: 10.5281/zenodo.22638702
 url: "https://doi.org/10.5281/zenodo.22638702"
-abstract: "Recovered final analysis scripts and provenance files supporting the manuscript 'A predefined triclosan-related 24-gene score is associated with an EMT-enriched tumor state in triple-negative breast cancer'."
+abstract: "Reproducibility archive supporting the cross-cohort validation of a locked triclosan-related 24-gene score in triple-negative breast cancer, including post-review external-only synthesis and a non-reselective locked-gene provenance audit."
 message: "If you use this analysis archive, please cite the archived software record and the associated manuscript when available."
 authors:
   - given-names: Jiachi
     family-names: Ji
     affiliation: "First Clinical Medical School, Beijing University of Chinese Medicine, Beijing 100029, China"
   - given-names: Peng
-    family-names: Lyu
+    family-names: Lv
     affiliation: "Cancer Diagnosis and Treatment Center, The Central Hospital of Enshi Tujia and Miao Autonomous Prefecture, Enshi 445000, Hubei, China"
   - given-names: Fengqin
     family-names: Shi
@@ -22,4 +22,6 @@ keywords:
   - triclosan
   - epithelial-mesenchymal transition
   - transcriptomics
+  - external validation
+  - specificity stress testing
   - reproducibility
